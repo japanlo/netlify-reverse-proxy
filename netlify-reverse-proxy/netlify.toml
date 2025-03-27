@@ -1,0 +1,25 @@
+[[redirects]]
+  from = "/proxy/:match/*"
+  to = "https://:match/:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
+  from = "/httpproxy/:match/*"
+  to = "http://:match/:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
+  from = "/chat"
+  to = "https://chat.openai.com/backend-api/conversation"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/openai"
+  to = "https://api.openai.com"
+  status = 200
+  force = true 
